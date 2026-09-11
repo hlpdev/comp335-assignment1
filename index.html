@@ -3,10 +3,11 @@
     
     <head>
         <meta charset="utf-8">
-        <title>Hunter Pollock - Portfolio</title>
         <link rel="stylesheet" href="./style.css">
 
-        <!-- viewport to fix scaling issues on mobile -->
+        <title>Hunter Pollock - Portfolio</title>
+
+        <!-- fixes scaling issues on mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     </head>
 
@@ -20,9 +21,10 @@
         </div>
         <div class="spot"></div> <!-- glare effect for mouse -->
 
+        <!-- top section tabs -->
         <nav id="top-tabs">
-            <a href="#" class="tab tab-selected"><span class="tab-number">1</span>readme.md<span class="tab-dot"></span></a>
-            <a href="#" class="tab"><span class="tab-number">2</span>about.md<span class="tab-dot"></span></a>
+            <a href="#intro" class="tab tab-selected"><span class="tab-number">1</span>readme.md<span class="tab-dot"></span></a>
+            <a href="#about" class="tab"><span class="tab-number">2</span>about.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">3</span>experience.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">4</span>projects.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">5</span>skills.md<span class="tab-dot"></span></a>
@@ -30,25 +32,71 @@
             <a href="#" class="tab"><span class="tab-number">7</span>contact.md<span class="tab-dot"></span></a>
         </nav>
 
+        <!-- intro section -->
         <section id="intro">
-            <div class="space"></div>
+            <div class="line-numbers"></div>
 
-            <h1 class="intro-comment large-text large-text-h2">Hunter Pollock</h1>
+            <div class="section-content">
 
-            <p class="console-text-line large-text-h3"><span class="pr">&gt;</span><span id="console-text">software engineer</span><span class="cursor"></span></p>
+                <h1 class="intro-title large-text large-text-h2">Hunter Pollock</h1>
 
-            <p class="intro-subtitle large-text large-text-h4">// b.s. computer science @ bridgewater state university * foxborough, ma</p>
+                <p class="console-text-line large-text large-text-h3"><span class="pr">hunter@bsu:~$</span><span id="console-text">software engineer</span><span class="cursor"></span></p>
 
-            <div class="boxes large-text large-text-h5">
-                <a class="box" href="mailto:hunter@hlpdev.xyz"><span class="key">email</span><span class="equals">=</span><span class="value">"hunter@hlpdev.xyz"</span></a>
-                <a class="box" href="https://github.com/hlpdev" target="_blank"><span class="key">github</span><span class="equals">=</span><span class="value">"hlpdev"</span></a>
-                <a class="box" href="https://linkedin.com/in/hunter-pollock" target="_blank"><span class="key">linkedin</span><span class="equals">=</span><span class="value">"hunter-pollock"</span></a>
+                <p class="intro-subtitle large-text large-text-h4">// b.s. computer science @ bridgewater state university * foxborough, ma</p>
+
+                <div class="boxes large-text large-text-h5">
+                    <a class="box" href="mailto:hunter@hlpdev.xyz"><span class="key">email</span><span class="equals">=</span><span class="value">"hunter@hlpdev.xyz"</span></a>
+                    <a class="box" href="https://github.com/hlpdev" target="_blank"><span class="key">github</span><span class="equals">=</span><span class="value">"hlpdev"</span></a>
+                    <a class="box" href="https://linkedin.com/in/hunter-pollock" target="_blank"><span class="key">linkedin</span><span class="equals">=</span><span class="value">"hunter-pollock"</span></a>
+                </div>
+
+                <p class="current large-text large-text-h6"><span class="orb"></span><span>currently building <a href="https://perchapp.org" target="_blank">Perch</a>, a notch overlay for windows launching on Steam</span></p>
+
+                <p class="scroll-hint">scroll to continue &darr;</p>
+
             </div>
-
-            <p class="current large-text large-text-h6"><span class="orb"></span><span>currently building <a href="https://perchapp.org" target="_blank">Perch</a>, a notch overlay for windows launching on Steam</span></p>
-
-            <p class="scroll-hint">scroll to continue &darr;</p>
         </section>
+
+        <!-- about section -->
+         <section id="about">
+            <div class="line-numbers"></div>
+
+            <div class="section-content">
+
+                <p class="console-text-line animate-in"><span class="pr">hunter@bsu:~$</span><span>cat about.md</span><span class="cursor"></span></p>
+
+                <h2 class="animate-in"><span class="hashtag">#</span>About</h2>
+
+                <div class="about-grid">
+
+                    <div>
+                        <p class="animate-in">I'm a Computer Science student at <strong>Bridgewater State University</strong> (B.S., expected May 2028) and have been programming for about eight years. I started by making Roblox games when I was a teenager and have since moved down the stack. Most of my work today is <strong>C & C++ desktop and systems software</strong> & <strong>backend services</strong>.</p>
+
+                        <p class="animate-in animate-in-1">I care about how things actually work: the allocator behind the API, the scheduler underneath the render loop. I like writing something end to end, from architecture and implementation, through infrastructure, documentation, and release.</p>
+
+                        <p class="indent animate-in animate-in-2"><span class="indent-arrow">&gt;</span> interests: systems programming, backend infastructure, real-time rendering and UI, game development, compilers and language development</p>
+
+                    </div>
+
+                    <div class="statistics">
+                        <div class="statistic animate-in"><span class="statistic-value">~8<i>years</i></span>programming</div>
+                        <div class="statistic animate-in animate-in-1"><span class="statistic-value"><i>~</i>3.9</span>major gpa ; 3.6 overall</div>
+                        <div class="statistic animate-in animate-in-2"><span class="statistic-value">650<i>k</i></span>steam downloads</div>
+                        <div class="statistic animate-in animate-in-3"><span class="statistic-value">5<i>M+</i></span>all time players across shipped games</div>
+                    </div>
+
+                </div>
+
+            </div>
+         </section>
+
+
+        <!-- scripts -->
+        <script src="./hover-orb.js" defer></script>
+        <script src="./typing-effect.js" defer></script>
+        <script src="./line-numbers.js" defer></script>
+        <script src="./scroll-animate-in.js" defer></script>
+        <script src="./scroll-watcher.js" defer></script>
 
     </body>
 

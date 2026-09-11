@@ -35,7 +35,8 @@
 
     /* font */
 
-    --mono-font: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    /* add a bunch of fallback fonts in case the client doesn't have a font */
+    --monospace-font: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
     /* animation timing */
 
@@ -64,7 +65,7 @@ body {
 
     color: var(--foreground-dim);
 
-    font-family: var(--mono-font);
+    font-family: var(--monospace-font);
     font-size: 15px;
     line-height: 1.75;
     font-variant-ligatures: none;
@@ -77,6 +78,85 @@ body {
     overflow-x: hidden;
 }
 
+/* element styling */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+h2 {
+    display: inline-block;
+    position: relative;
+
+    color: var(--foreground);
+
+    font-size: clamp(23px, 3.2vw, 30px);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+
+    margin-bottom: 22px;
+}
+
+h2 .hashtag {
+    color: var(--blue);
+    font-weight: 600;
+
+    margin-right: 10px;
+}
+
+/* gradient underline & effects */
+h2::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(90deg, var(--blue), var(--purple), transparent);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.9s var(--ease) 0.2s;
+}
+
+h2.animate-in-done::after {
+    transform: scaleX(1);
+}
+
+strong {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.large-text {
+    opacity: 0;
+    transform: translateY(18px);
+
+    animation: rise-effect 0.9s var(--ease) forwards;
+}
+
+.large-text-h1 { animation-delay: 0.1s; }
+.large-text-h2 { animation-delay: 0.25s; }
+.large-text-h3 { animation-delay: 0.4s; }
+.large-text-h4 { animation-delay: 0.55s; }
+.large-text-h5 { animation-delay: 0.7s; }
+.large-text-h6 { animation-delay: 0.9s; }
+
+@keyframes rise-effect {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
 
 /* custom scrollbar */
 
@@ -132,11 +212,6 @@ html {
 }
 
 #top-tabs::-webkit-scrollbar { display: none; } /* remove scrollbar from top area */
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
 .tab {
     display: flex;
@@ -282,6 +357,55 @@ a {
     background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 50%), rgba(122, 162, 247, 0.07), transparent 60%);
 }
 
+/* sections */
+
+section {
+    position: relative;
+
+    padding: 78px 0 26px;
+
+    scroll-margin-top: calc(var(--tab-height) + 14px);
+}
+
+.section-content {
+    max-width: 1060px;
+
+    margin: 0 auto;
+    padding: 0 24px 0 84px;
+}
+
+.section-header b {
+    color: var(--foreground-dim);
+    font-weight: 500;
+}
+
+/* line numbers */
+
+.line-numbers {
+    position: absolute;
+    top: 78px;
+    bottom: 26px;
+    left: 24px;
+
+    width: 40px;
+
+    overflow: hidden;
+
+    color: #2c3352;
+    font-size: 12.5px;
+    line-height: var(--row);
+    text-align: right;
+    white-space: pre;
+
+    /* no mouse selection or hover cursor change */
+    user-select: none;
+    pointer-events: none;
+
+    /* fade the numbers out towards the bottom */
+    -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent);
+    mask-image: linear-gradient(180deg, #000 88%, transparent);
+}
+
 /* intro section */
 
 #intro {
@@ -290,14 +414,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    max-width: 1060px;
-
-    margin: 0 auto;
-    padding: 40px 24px 26px;
 }
 
-.intro-comment {
+.intro-title {
     font-size: clamp(38px, 7vw, 74px);
     font-weight: 800;
     letter-spacing: -2px;
@@ -306,7 +425,7 @@ a {
     margin-bottom: 20px;
 
     background: linear-gradient(100deg, var(--foreground) 0%, var(--blue) 30%, var(--purple) 55%, var(--blue) 80%, var(--foreground) 100%);
-    background-size: 250% 100%;
+    background-size: 200% 100%;
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -314,12 +433,12 @@ a {
 
     color: var(--foreground);
 
-    animation: shimmer-effect 14s linear infinite;
+    animation: shimmer-effect 14s linear infinite, rise-effect 0.9s var(--ease) 0.25s forwards;
 }
 
 @keyframes shimmer-effect {
     to {
-        background-position: 250% 0;
+        background-position: -200% 0;
     }
 }
 
@@ -452,28 +571,16 @@ a {
     border-radius: 50%;
     border: 1px solid var(--green);
 
-    animation: ring-effect 2.2s ease-out infinite;
-}
-
-.current a {
-    color: var(--green);
+    animation: ring-effect 1.2s var(--ease) infinite;
 }
 
 @keyframes ring-effect {
     0% { transform: scale(0.4); opacity: 0.9; }
-    100% { transform: scale(1.8); opacity: 0; }
+    100% { transform: scale(1.4); opacity: 0; }
 }
 
 .current a {
-    color: var(--purple);
-
-    border-bottom: 1px solid transparent;
-
-    transition: border-color 0.25s;
-}
-
-.current a:hover {
-    border-color: var(--purple);
+    color: var(--green);
 }
 
 /* cursor effect */
@@ -511,4 +618,96 @@ a {
 @keyframes hint-jumping {
     0%, 100% { opacity: 0.5; transform: translateY(0); }
     50% { opacity: 1; transform: translateY(5px); }
+}
+
+/* scroll animate into view */
+
+.animate-in {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(6px);
+
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease), filter 0.8s var(--ease);
+}
+
+.animate-in.animate-in-done {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+.animate-in-1 { transition-delay: 0.08s; }
+.animate-in-2 { transition-delay: 0.16s; }
+.animate-in-3 { transition-delay: 0.24s; }
+
+/* about section */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    align-items: start;
+
+    gap: 40px;
+}
+
+.indent {
+    border-left: 3px solid var(--purple);
+
+    padding: 2px 0 2px 18px;
+
+    color: var(--foreground-dim);
+
+    margin: 20px 0 0;
+}
+
+.indent .indent-arrow {
+    color: var(--purple);
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.statistic {
+    background: rgba(36, 40, 59, 0.7);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 14px 16px;
+
+    transition: border-color 0.3s, transform 0.3s var(--ease), box-shadow 0.3s;
+}
+
+.statistic:hover {
+    border-color: rgba(122, 162, 247, 0.55);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.statistic .statistic-value {
+    display: block;
+
+    color: var(--foreground);
+
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.statistic .statistic-value i {
+    color: var(--yellow);
+    font-style: normal;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.statistic .statistic-label {
+    color: var(--comment);
+    font-size: 11.5px;
 }
