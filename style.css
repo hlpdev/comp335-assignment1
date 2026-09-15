@@ -991,11 +991,9 @@ section {
     font-size: 12.5px;
     font-weight: normal;
 
-    margin-bottom: 10px;
-}
-
-.skills-title {
     color: var(--yellow);
+
+    margin-bottom: 10px;
 }
 
 .skills-title .skills-title-gray {
