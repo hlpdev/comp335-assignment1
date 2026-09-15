@@ -50,7 +50,6 @@
 /*****************************************************/
 
 /* remove default margin and padding from everything */
-
 * {
     box-sizing: border-box;
 
@@ -843,4 +842,128 @@ section {
 
 .experience-item .tags {
     margin-top: 14px;
+}
+
+/* projects section */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    gap: 18px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(36, 40, 59, 0.55);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 22px 24px;
+
+    transition: opacity 0.8s var(--ease), filter 0.8s var(--ease), border-color 0.3s, transform 0.35s var(--ease), box-shadow 0.35s;
+}
+
+.card-wide {
+    grid-column: 1 / -1;
+}
+
+.card:hover {
+    border-color: rgba(122, 162, 247, 0.5);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 17px;
+}
+
+.card h3 .card-title {
+    color: var(--blue);
+}
+
+.card h3 .card-slash {
+    color: var(--comment);
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--comment);
+    font-size: 12px;
+}
+
+.card-links {
+    display: inline-flex;
+
+    gap: 12px;
+}
+
+.card-links a {
+    color: var(--cyan);
+
+    border-bottom: 1px solid transparent;
+
+    transition: border-color 0.25s;
+}
+
+.card-links a:hover {
+    border-color: var(--cyan);
+}
+
+.card-description {
+    color: var(--foreground-dim);
+    font-size: 13.5px;
+
+    /* push tags to the bottom */
+    flex: 1;
+}
+
+.card .tag {
+    background: var(--background);
+    font-size: 12px;
+
+    padding: 3px 10px;
+}
+
+/* status labels */
+
+.status {
+    border-radius: 5px;
+
+    padding: 1px 8px;
+
+    font-size: 11px;
+}
+
+.status-development {
+    background: rgba(224, 175, 104, 0.12);
+    border: 1px solid rgba(224, 175, 104, 0.35);
+    color: var(--yellow);
+}
+
+.status-live {
+    background: rgba(158, 206, 106, 0.12);
+    border: 1px solid rgba(158, 206, 106, 0.35);
+    color: var(--green);
+}
+
+.status-retired {
+    background: rgba(86, 95, 137, 0.15);
+    border: 1px solid var(--border);
+    color: var(--comment);
 }
