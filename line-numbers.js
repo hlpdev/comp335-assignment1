@@ -4,9 +4,10 @@ const row_height = 26;
 const minimum_width = 940;
 
 function fill_line_numbers() {
-    /* hide the numbers on mobile / narrow screens */
+    // hide the line numbers on mobile / narrow screens (anything less then 940 pixels wide)
     const visible = window.innerWidth > minimum_width;
 
+    // for each line number instance, we calculate section height and draw 1..N depending on section height
     line_numbers.forEach((line_number_element) => {
         if (!visible) {
             line_number_element.textContent = '';
@@ -27,7 +28,7 @@ function fill_line_numbers() {
 fill_line_numbers();
 
 // re-render the line numbers whenever the window size changes
-// uses timer so we're not reseting a ton during the window resize
+// only update 150ms after the previous update
 let resize_timer;
 window.addEventListener('resize', () => {
     clearTimeout(resize_timer);

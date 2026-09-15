@@ -346,7 +346,7 @@ html {
 @keyframes drift-2 { to { transform: translate(-9vmax, -11vmax) scale(1.05); } }
 @keyframes drift-3 { to { transform: translate(-14vmax, 6vmax) scale(1.12); } }
 
-.spot {
+.mouse-glare {
     position: fixed;
     inset: 0;
     z-index: -1;
