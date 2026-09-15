@@ -976,3 +976,28 @@ section {
     border: 1px solid var(--border);
     color: var(--comment);
 }
+
+/* skills */
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills:first-of-type {
+    margin-top: 4px;
+}
+
+.skills-title {
+    font-size: 12.5px;
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+
+.skills-title {
+    color: var(--yellow);
+}
+
+.skills-title .skills-title-gray {
+    color: var(--comment)
+}
