@@ -25,7 +25,7 @@
         <nav id="top-tabs">
             <a href="#intro" class="tab tab-selected"><span class="tab-number">1</span>readme.md<span class="tab-dot"></span></a>
             <a href="#about" class="tab"><span class="tab-number">2</span>about.md<span class="tab-dot"></span></a>
-            <a href="#" class="tab"><span class="tab-number">3</span>experience.md<span class="tab-dot"></span></a>
+            <a href="#experience" class="tab"><span class="tab-number">3</span>experience.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">4</span>projects.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">5</span>skills.md<span class="tab-dot"></span></a>
             <a href="#" class="tab"><span class="tab-number">6</span>education.md<span class="tab-dot"></span></a>
@@ -58,7 +58,7 @@
         </section>
 
         <!-- about section -->
-         <section id="about">
+        <section id="about">
             <div class="line-numbers"></div>
 
             <div class="section-content">
@@ -88,8 +88,83 @@
                 </div>
 
             </div>
-         </section>
+        </section>
 
+        <!-- experience section -->
+        <section id="experience">
+            <div class="line-numbers"></div>
+
+            <div class="section-content">
+                <p class="console-text-line animate-in"><span class="pr">hunter@bsu:~$</span><span>cat experience.md</span><span class="cursor"></span></p>
+
+                <h2 class="animate-in"><span class="hashtag">#</span>Experience</h2>
+
+                <div class="experience">
+
+                    <div class="experience-item animate-in">
+                        <div class="experience-when"><b>Jul 2026 - present</b></div>
+                        <div>
+
+                            <h3><span class="experience-title">Perch</span><span class="experience-subtitle"> * <a href="https://perchapp.org" target="_blank"><u>perchapp.org</u></a></span></h3>
+
+                            <p class="experience-role">Co-founder &amp; software engineer</p>
+
+                            <ul>
+                                <li>Co-founded Perch, a Dynamic Island style notch overlay for Windows launching on steam. I am responsible for all engineering, my co-founder is responsible for product design and planning.</li>
+                                <li>Built the core application in C++20 on SDL3, OpenGL, and Chromium Embedded Framework</li>
+                                <li>Built the Luau modding system and <strong>Perch Studio</strong>, a standalone IDE with Monaco, a luau-language server, and live preview through Perch's own renderer.</li>
+                            </ul>
+
+                            <div class="tags">
+                                <span class="tag">C++20</span><span class="tag">SDL3</span><span class="tag">OpenGL</span><span class="tag">CEF</span><span class="tag">Luau</span><span class="tag">Steamworks</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="experience-item animate-in">
+                        <div class="experience-when"><b>May 2023 - Fall 2025</b>project retired</div>
+                        <div>
+
+                            <h3><span class="experience-title">NuAuth</span><span class="experience-subtitle"> * software licensing platform & DRM</span></h3>
+
+                            <p class="experience-role">Co-founder &amp; software engineer</p>
+
+                            <ul>
+                                <li>Architected and implemented the core DRM backend: Unique identifier and network based license enforcement, authenticated streaming of assets to client applications.</li>
+                                <li>Designed multi-region infrastructure with a central core application and database, a global Redis layer, and regional authentication nodes with local caches for low-latency license validation.</li>
+                            </ul>
+
+                            <div class="tags">
+                                <span class="tag">C#</span><span class="tag">C++</span><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Docker</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="experience-item animate-in">
+                        <div class="experience-when"><b>2018 - present</b>roblox developer</div>
+                        <div>
+
+                            <h3><span class="experience-title">Independent Game Developer</span><span class="experience-subtitle"> * Roblox</span></h3>
+
+                            <p class="experience-role">Programmer, Systems Designer, UI Designer, & Game Designer</p>
+
+                            <ul>
+                                <li>Shipped multiple multiplayer games totaling <strong>5M+ plays</strong>, peaking at <strong>~3,000 concurrent players</strong>.</li>
+                                <li>Built matchmaking and lobby systems, in-game economies, procedural map generation, NPC AI, and server-authoritative anti-cheats.</li>
+                            </ul>
+
+                            <div class="tags">
+                                <span class="tag">Luau</span><span class="tag">Roblox Studio</span><span class="tag">ASP.NET</span><span class="tag">Node.js</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <!-- scripts -->
         <script src="./hover-orb.js" defer></script>
