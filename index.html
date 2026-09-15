@@ -178,6 +178,7 @@
 
                 <div class="cards">
 
+                    <!-- perch -->
                     <div class="card card-wide animate-in">
                         <div class="card-header">
                             <h3><span class="card-title">perch</span><span class="card-slash">/</span></h3>
@@ -187,11 +188,221 @@
                                 <span class="status status-development">in development</span>
                                 <span class="card-links"><a href="https://perchapp.org" target="_blank">perchapp.org</a></span>
                             </span>
+                        </div>
 
-                            <p class="card-description">A notch overlay for Windows. Music, calls, volume, and user widgets live in one pill at the top of the screen: present when something happens, gone when it's done. Written in C++20 on SDL3 and OpenGL, with the UI rendered by CEF (Chromium Embedded Framework) off-screen and composited over the desktop through a click-through layered window.</p>
+                       <p class="card-description">
+                            A notch overlay for Windows. Music, calls, volume, and user widgets live in one pill 
+                            at the top of the screen: present when something happens, gone when it's done. Written 
+                            in C++20 on SDL3 and OpenGL, with the UI rendered by CEF (Chromium Embedded Framework) 
+                            off-screen and composited over the desktop through a click-through layered window.
+                        </p>
+                        <p class="card-description">
+                            Utilized frontier models and agentic workflows to design Perch's interface, 
+                            arbitration engine, transition protocol, mod system, voice pipeline, and Perch Studio, 
+                            with me directing the systems design & architecture, ruling on behavior, and 
+                            live-testing every build. Providers feed a C++ core that owns all state. The 
+                            arbitration engine ranks what is present by urgency and the user's settings, 
+                            chooses features to display, and solves the layout. Each solve is pushed to 
+                            the view as enter, exit, move, and morph/modify operations that spring-animate 
+                            features into place. Every widget, built-ins included, is a sandboxed Luau mod 
+                            loaded via the filesystem or through the Steam Workshop. Mods are written against 
+                            a strictly typed API with scoped permissions. Perch Studio, a standalone mod IDE 
+                            shipped as its on Steam tool, uses Monaco with luau-lsp over our API, displays 
+                            previews through Perch's real rendering system, and publishes mods straight to 
+                            the Steam Workshop.
+                        </p>
 
-                            
+                        <div class="tags">
+                            <span class="tag">C++20</span>
+                            <span class="tag">SDL3</span>
+                            <span class="tag">OpenGL 3.3</span>
+                            <span class="tag">CEF (Chromium Embedded Framework)</span>
+                            <span class="tag">Win32</span>
+                            <span class="tag">Luau</span>
+                            <span class="tag">CMake</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Steamworks</span>
+                        </div>
+                    </div>
 
+                    <!-- zomboid map -->
+                    <div class="card card-wide animate-in animate-in-1">
+                        <div class="card-header">
+                            <h3><span class="card-title">zomboid-map</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                August 2026 - present
+                                <span class="status status-live">live</span>
+                                <span class="card-links"><a href="https://zomboidmap.com" target="_blank">zomboidmap.com</a></span>
+                                <span class="card-links"><a href="https://stats.zomboidmap.com" target="_blank">stats.zomboidmap.com</a></span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            An interactive map for Project Zomboid Build 42, built to
+                            replace the unstable official map. A C++ ingest pipeline
+                            reverse engineers the game's binary map and texture formats
+                            and renders the entire Kentucky world into a tile map. A
+                            React frontend layers game data on top.
+                        </p>
+
+                        <p class="card-description">
+                            Features a multithreaded isometric renderer with per-thread caches 
+                            and a WebP tile pyramid, per-floor output enables floor switching 
+                            and basement views, A* route planning over the street network with 
+                            driving and walking ETAs, loot finder, base-finder, zombie heatmap, 
+                            map zones, room interiors, vehicle spawn info, and more.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">C++20</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Cloudflare Pages</span>
+                            <span class="tag">Cloudflare R2</span>
+                            <span class="tag">Cloudflare Workers</span>
+                        </div>
+                    </div>
+
+                    <!-- nuauth -->
+                    <div class="card card-wide animate-in animate-in-2">
+                        <div class="card-header">
+                            <h3><span class="card-title">nuauth</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                2023 - 2025
+                                <span class="status status-retired">retired</span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            A DRM and software-licensing platform for solo developers through enterprise 
+                            clients: license validation, hardware-bound bans, and authenticated secret 
+                            streaming behind a multi-region ASP.NET deployment.
+                        </p>
+
+                        <p class="card-description">
+                            The project was retired in 2025.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Rust</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">TailwindCSS</span>
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">MVC</span>
+                            <span class="tag">EF Core</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <!-- build a helicopter -->
+                    <div class="card animate-in animate-in-3">
+                        <div class="card-header">
+                            <h3><span class="card-title">build-a-helicopter</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                August 2025
+                                <span class="status status-live">live</span>
+                                <span class="card-links"><a href="https://www.roblox.com/games/129429860800233/Build-A-Helicopter" target="_blank">play now</a></span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            An endless runner on Roblox. Fly a helicopter as far
+                            as possible before crashing or running out of fuel, then
+                            spend earnings across about 60 purchasable parts covering
+                            blocks, propulsion, and aerodynamics.
+                        </p>
+
+                        <p class="card-description">
+                            Features procedural map generation with seeded random maps 
+                            assembled from section models, connected seamlessly at runtime 
+                            with no pop-in, a full part shop, building, painting, a plot system,
+                            a tutorial, and cross-platform controls and user interface.
+                        </p>
+
+                        <p class="card-description">
+                            Utilized Roblox's Funnel and Economy analytics APIs to fine tune
+                            gameplay mechanics and economy pricing.
+                        </p>
+
+                        <p class="card-description">
+                            ~800K+ plays & peaked around 1,000 concurrent players
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Luau</span>
+                            <span class="tag">Roblox Studio</span>
+                        </div>
+                    </div>
+
+                    <!-- cold call -->
+                    <div class="card animate-in animate-in-4">
+                        <div class="card-header">
+                            <h3><span class="card-title">cold-call</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                July 2024
+                                <span class="status status-live">live</span>
+                                <span class="card-links"><a href="https://www.roblox.com/games/18537864834/COLD-CALL" target="_blank">play now</a></span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            A Roblox adaption of COLDLINE by Adam Pype and Viktor Kraus.
+                            A short horror puzzle where players navigate an automated phone
+                            system under a 10 minute limit to stop a nuclear strike.
+                        </p>
+
+                        <p class="card-description">
+                            Features a complex telephone interaction system and behavior tree,
+                            a live map system which shows missile trajectory, sound system, and
+                            multi-platform support.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Luau</span>
+                            <span class="tag">Roblox Studio</span>
+                        </div>
+                    </div>
+
+                    <!-- five nights at darius -->
+                    <div class="card card-wide animate-in animate-in-5">
+                        <div class="card-header">
+                            <h3><span class="card-title">five-nights-at-darius</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                August 2023 - May 2024
+                                <span class="status status-retired">retired</span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            A multiplayer recreation of Five Nights at Freddy's 1 themed
+                            around Darius, an online personality. Players survive nights as
+                            security guards managing cameras and limited power against
+                            hostile NPCs.
+                        </p>
+
+                        <p class="card-description">
+                            Features a fully functional lobby / party system, full character
+                            customization, and an item shop.
+                        </p>
+
+                        <p class="card-description">
+                            ~2.5M+ plays & peaked around 3,000 concurrent players
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Luau</span>
+                            <span class="tag">Roblox Studio</span>
                         </div>
                     </div>
 

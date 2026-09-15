@@ -633,6 +633,9 @@ section {
 .animate-in-1 { transition-delay: 0.08s; }
 .animate-in-2 { transition-delay: 0.16s; }
 .animate-in-3 { transition-delay: 0.24s; }
+.animate-in-4 { transition-delay: 0.32s; }
+.animate-in-5 { transition-delay: 0.40s; }
+.animate-in-6 { transition-delay: 0.48s; }
 
 /* about section */
 
@@ -849,7 +852,6 @@ section {
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
 
     gap: 18px;
 }
@@ -869,6 +871,7 @@ section {
 }
 
 .card-wide {
+    /* use full row (all columns) */
     grid-column: 1 / -1;
 }
 
@@ -928,9 +931,15 @@ section {
 .card-description {
     color: var(--foreground-dim);
     font-size: 13.5px;
+}
 
-    /* push tags to the bottom */
-    flex: 1;
+/* fix bottom spacing on the last description element in a card */
+.card-description:last-of-type {
+    margin-bottom: 14px;
+}
+
+.card .tags {
+    margin-top: auto;
 }
 
 .card .tag {
