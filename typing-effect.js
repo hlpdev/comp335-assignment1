@@ -4,7 +4,9 @@ const console_text = document.getElementById('console-text');
 // phrases to type through
 const phrases = [
     'software engineer',
-    'game developer'
+    'game developer',
+    'systems designer',
+    'backend engineer',
 ];
 
 // conf

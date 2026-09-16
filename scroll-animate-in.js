@@ -13,7 +13,7 @@ const animate_in_watcher = new IntersectionObserver((entries) => {
         // unobserve the element after we are done animating it
         animate_in_watcher.unobserve(entry.target);
     });
-}, { rootMargin: '0px 0px -12% 0px' });
+}, { rootMargin: '0px 0px -40px 0px' });
 
 // observe all elements that should 'animate' in
 animated_in_elements.forEach((element) => animate_in_watcher.observe(element));
