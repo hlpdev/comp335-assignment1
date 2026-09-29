@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <title>COMP-335 Assignment 1</title>
+
+        <style>
+            @media only screen and (min-width:961px) {
+                #mobile { display: none; }
+                #tablet { display: none; }     
+            }
+            @media only screen and (min-width:721px) and (max-width:960px) {
+                #mobile { display: none; }
+                #desktop { display: none; }
+            }
+            @media only screen and (max-width:720px) {
+                #tablet { display: none; }
+                #desktop { display: none; }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <div class="row mt-5 mb-4 text-center">
+                <h3>COMP-335 Assignment 1</h3>
+                <h6>Hunter Pollock</h6>
+
+                <h4 id="mobile" class="mt-2">You're on a phone!</h4>
+                <h4 id="tablet" class="mt-2">You're on a tablet!</h4>
+                <h4 id="desktop" class="mt-2">You're on a computer!</h4>
+
+                <h3 class="mt-4">Projects:</h3>
+            </div>
+            
+            <div class="row gap-2 mt-2">
+
+                <div class="col">
+                    <h3 class="text-start">Bloxopoly</h3>
+                    <p class="text-start">
+                        A recreation of Monopoly built on Roblox using Luau
+                        inside of Roblox Studio. Releasing this Friday.
+                        <br><br>
+                        Features:
+                        <ul>
+                            <li>Matchmaking & Public / Private Lobbies</li>
+                            <li>
+                                Full Character / Piece customization & monitization including:
+                                <ul>
+                                    <li>Game Pieces</li>
+                                    <li>Face Textures</li>
+                                    <li>Hats</li>
+                                    <li>Music Kits</li>
+                                    <li>KO Effects</li>
+                                    <li>Titles</li>
+                                </ul>
+                            </li>
+                            <li>Customizable game settings & win conditions</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h3 class="text-end">Perch</h3>
+                    <p class="text-end">
+                        A notch overlay for Windows. Music, calls, volume, and
+                        user widgets live in one pill at the top of the screen: 
+                        present when something happens, gone when it's done. 
+                        Written in C++20 on SDL3 and OpenGL, with the UI rendered
+                        by CEF (Chromium Embedded Framework) off-screen and 
+                        composited over the desktop through a click-through
+                        layered window.
+                    </p> 
+                </div>    
+
+            </div>
+
+            <div class="row gap-2 mt-2">
+
+                <div class="col">
+                    <h3 class="text-start">Zomboid Map</h3>
+                    <p class="text-start">
+                        An interactive map for Project Zomboid B42, built to replace
+                        the unstable official map. A C++ ingest pipeline reverse
+                        engineers the game's binary map and texture formats and 
+                        renders the entire Kentucky world into a isometric tile map.
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h3 class="text-end">NuAuth</h3>
+                    <p class="text-end">
+                        A DRM and software licensing platform for solo developers
+                        and small teams.
+                        <br>
+                        Retired in 2025.
+                    </p> 
+                </div>    
+
+            </div>
+
+            <div class="row gap-2 mt-2">
+
+                <div class="col">
+                    <h3 class="text-start">Build A Helicopter</h3>
+                    <p class="text-start">
+                        An endless runner on Roblox. Fly a helicopter as far
+                        as possible before crashing or running out of fuel,
+                        then spend earnings across about 60 purchaseable parts
+                        covering blocks, propulsion, and aerodynamics.
+                        <br>
+                        Features procedural map generation with seeded random
+                        maps assmbled from section models, connected seamlessly
+                        at runtime, a full part shop, building, painting, a plot
+                        system, a tutorial, and cross-platform controls and UI.
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h3 class="text-end">COLD CALL</h3>
+                    <p class="text-end">
+                        A Roblox adaption of COLDLINE by Adam Pype and Viktor Kraus.
+                        A Short horror puzzle where players navigate an automated
+                        phone system under a 10 minute timer to stop a nuclear strike.
+                        <br>
+                        Features a complex telephone interaction system and behavior
+                        tree, a live map system which shows missile trajectory, sound
+                        system, and multi-platform support.
+                    </p> 
+                </div>    
+
+            </div>
+
+            <div class="row gap-2 mt-2">
+
+                <h3 class="text-start">Five Nights at Darius'</h3>
+                <p class="text-start">
+                    A multiplayer recreation of Five Nights at Freddy's 1 themed
+                    around Darius, an online personality. Players survive nights
+                    as security guards managing cameras and limited power against
+                    hostile NPCs.
+                    <br>
+                    Features a fully functional lobby / party system, full
+                    character customization, and an item shop.
+                </p> 
+
+            </div>
+
+            <div class="row mt-2 mb-5">
+
+                <h3 class="text-start">Project Idea</h3>
+                <p class="text-start">
+                    One project idea I had was that we could create a campus marketplace website where
+                    students can buy, sell, or trade items like textbooks, dorm supplies, and electronics.
+                    Users can create accounts, post listings with photos, prices, and item condition,
+                    and browse or search listings by category. Buyers can message sellers directly
+                    through the site to arrange a meetup on campus.
+                </p>
+
+            </div>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
