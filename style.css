@@ -938,6 +938,26 @@ section {
     margin-bottom: 14px;
 }
 
+.card-list {
+    color: var(--foreground-dim);
+    font-size: 13.5px;
+
+    padding-left: 22px;
+    margin-bottom: 14px;
+}
+
+.card-list li {
+    margin-bottom: 8px;
+}
+
+.card-list li::marker {
+    color: var(--teal);
+}
+
+.card-list b {
+    color: var(--foreground);
+}
+
 .card .tags {
     margin-top: auto;
 }
