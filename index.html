@@ -110,34 +110,6 @@
 
                 <div class="experience">
 
-                    <!-- perch -->
-                    <div class="experience-item animate-in animate-in-1">
-                        <div class="experience-when"><b>Jul 2026 - present</b></div>
-                        <div>
-                            <h3><span class="experience-title">Perch</span><span class="experience-subtitle"> * <a href="https://perchapp.org" target="_blank"><u>perchapp.org</u></a> * releasing on steam Q4 2026</span></h3>
-
-                            <p class="experience-role">Co-founder &amp; software engineer</p>
-
-                            <ul>
-                                <li>
-                                    Co-founded Perch, a Dynamic Island style notch overlay for Windows launching on steam. 
-                                    I am responsible for all systems design and engineering, my partner is responsible for 
-                                    product design and planning.</li>
-                                <li>
-                                    Built the core application in C++20 on SDL3, OpenGL, and Chromium Embedded Framework
-                                </li>
-                                <li>
-                                    Built the Luau modding system and <strong>Perch Studio</strong>, a standalone IDE 
-                                    with Monaco, a luau-language server, and live preview through Perch's own renderer.
-                                </li>
-                            </ul>
-
-                            <div class="tags">
-                                <span class="tag">C++20</span><span class="tag">SDL3</span><span class="tag">OpenGL</span><span class="tag">CEF</span><span class="tag">Luau</span><span class="tag">Steamworks</span>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- pal -->
                     <div class="experience-item animate-in animate-in-2">
                         <div class="experience-when"><b>September 2026 - current</b></div>
@@ -145,7 +117,10 @@
                             <h3><span class="experience-title">Teaching Assistant / Peer Assist Leader</span><span class="experience-subtitle"> (PAL)</span></h3>
 
                             <div class="tags">
-                                <span class="tag">Teaching</span><span class="tag">Python</span><span class="tag">Communication</span>
+                                <span class="tag">Teaching</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Communication</span>
+                                <span class="tag">Debugging</span>
                             </div>
                         </div>
                     </div>
@@ -176,6 +151,185 @@
                 <h2 class="animate-in"><span class="hashtag">#</span>Projects</h2>
 
                 <div class="cards">
+
+                    <!-- futureblitz -->
+                    <div class="card card-wide animate-in">
+                        <div class="card-header">
+                            <h3><span class="card-title">futureblitz</span><span class="card-slash">/</span></h3>
+
+                            <span class="card-meta">
+                                October 2026 - present
+                                <span class="status status-development">in development</span>
+                            </span>
+                        </div>
+
+                        <p class="card-description">
+                            A from-scratch successor to Blitz3D: a statically typed BASIC-style language, it's compiler, and a full
+                            standard library, so writing a game feels as quick as it did in 2001, and the result ships as one 
+                            executable with no runtime to install.
+                        </p>
+                        <p class="card-description">
+                            Utilized frontier models and agentic workflows, with up to a dozen parallel agent sessions each building
+                            one component of the language in its own worktree, with me directing the language design and architecture,
+                            ruling on every language and library decision, and reviewing all output. The compiler is built in C++23 with
+                            LLVM's C API and links with lld. It runs source through a lexer, parser, semantic analysis, a mid-level IR
+                            with its own compile-time interpreter, and LLVM codegen, for Windows, Linux, and macOS on x64 and ARM64.
+                        </p>
+                        <p class="card-description">
+                            The core language has Structs and Classes with automatic reference counting, nullable types that the 
+                            compiler narrows after a check, and single inheritance with Abstract, Final, and Override. It has arrays
+                            and fixed arrays, Enums and @Flags, Defer, and errors as values with Throw, Try, Catch, and Finally. Weak
+                            references break cycles, and debug builds report leaked objects and point out the cycles that hold them.
+                        </p>
+                        <p class="card-description">
+                            Programs can span many files. The language adds tuples, function values and closures, generics with
+                            constraints, user-defined Operators, and Interfaces with default Methods. Extend adds members to
+                            existing types, and For In works over any sequence, with slices and ranges.
+                        </p>
+                        <p class="card-description">
+                            Code can run at compile time. Const Functions run in the compiler's own interpreter, generics can take
+                            constant values, and reflection walks a type's Fields, Methods, and attributes as the program compiles.
+                        </p>
+                        <p class="card-description">
+                            Concurrency is built in. There are threads, Atomic and Mutex types, Shared Classes, Spawn and Tasks,
+                            Parallel For, and Channels. Async and Await run over stackless coroutines, with schedulers made for
+                            game loops. The compiler's Sendable and @MainThread checks catch data races before the program ever runs.
+                        </p>
+                        <p class="card-description">
+                            Larger projects get modules with Import, From, and Public, Package, and Private visibility, and project.toml
+                            packages with native libraries. C interop covers Extern blocks, pointers under Unsafe, @CLayout structs on
+                            the C ABI of every target, and Callbacks from C. fb-bindgen turns any C header into a FutureBlitz module
+                            through libclang.
+                        </p>
+                        <p class="card-description">
+                            The standard library is written mostly in FutureBlitz itself, and every C library it uses is linked statically:
+                            <br>
+                            <ul>
+                                <li>
+                                    <b>Basics:</b> collections, formatting and parsing (with a debug form for every value), Unicode text with
+                                    a built-in Char, regex, Markdown, and templates.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Math:</b> vectors, matrices, noise, and splines; big integers, decimals, and units of measure.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Data:</b> built-in Load and Save that serialize any type; JSON, MessagePack, TOML, CSV, INI, XML,
+                                    and YAML; Protocol Buffers read straight from .proto files.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>System:</b> streams, files, and a virtual file system with embedded assets; time zones, processes,
+                                    cryptography, compression and archives, UUIDs, and SQLite.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Programs:</b> image codecs and drawing, terminal UIs, and pathfinding.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Networking:</b> TCP, UDP, IPC, and LAN discovery; TLS, an HTTP/2 client, an HTTP server with 
+                                    WebSockets, and reliable UDP for multiplayer games.
+                                </li>
+                            </ul>
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">C++23</span>
+                            <span class="tag">CMake</span>
+                            <span class="tag">Ninja</span>
+                            <span class="tag">LLVM</span>
+                            <span class="tag">lld</span>
+                            <span class="tag">libclang</span>
+                            <span class="tag">GCC</span>
+                            <span class="tag">MinGW-w64</span>
+                            <span class="tag">Clang</span>
+                            <span class="tag">clang-format</span>
+                            <span class="tag">clang-tidy</span>
+                            <span class="tag">Catch2</span>
+                            <span class="tag">toml++</span>
+                            <span class="tag">fast_float</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">WSL</span>
+                            <span class="tag">libuv</span>
+                            <span class="tag">mbedTLS</span>
+                            <span class="tag">libcurl</span>
+                            <span class="tag">nghttp2</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">zlib-ng</span>
+                            <span class="tag">zstd</span>
+                            <span class="tag">LZ4</span>
+                            <span class="tag">liblzma</span>
+                            <span class="tag">minizip-ng</span>
+                            <span class="tag">libtommath</span>
+                            <span class="tag">mpdecimal</span>
+                            <span class="tag">IANA tzdata</span>
+                            <span class="tag">xxHash</span>
+                            <span class="tag">BLAKE3</span>
+                            <span class="tag">Argon2</span>
+                            <span class="tag">crypt_blowfish</span>
+                            <span class="tag">Monocypher</span>
+                            <span class="tag">utf8proc</span>
+                            <span class="tag">PCRE2</span>
+                            <span class="tag">md4c</span>
+                            <span class="tag">stb_image</span>
+                            <span class="tag">libwebp</span>
+                            <span class="tag">nanosvg</span>
+                            <span class="tag">Protocol Buffers</span>
+                            <span class="tag">JSON</span>
+                            <span class="tag">MessagePack</span>
+                            <span class="tag">TOML</span>
+                            <span class="tag">YAML</span>
+                            <span class="tag">XML</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">ACME</span>
+                            <span class="tag">HTTP/2</span>
+                            <span class="tag">TLS</span>
+                            <span class="tag">mDNS</span>
+                            <span class="tag">Language Server Protocol</span>
+                            <span class="tag">VS Code Extensions</span>
+                            <span class="tag">Cloudflare Workers</span>
+                            <span class="tag">Cloudflare R2</span>
+                            <span class="tag">Cloudflare D1</span>
+                            <span class="tag">Cloudflare Durable Objects</span>
+                            <span class="tag">Cloudflare Queues</span>
+                            <span class="tag">Cloudflare Containers</span>
+                            <span class="tag">Cloudflare Workers Analytics Engine</span>
+                            <span class="tag">Cloudflare Email Service</span>
+                            <span class="tag">Cloudflare Turnstile</span>
+                            <span class="tag">Astro</span>
+                            <span class="tag">MDX</span>
+                            <span class="tag">Shiki</span>
+                            <span class="tag">Pagefind</span>
+                            <span class="tag">Svelte 5</span>
+                            <span class="tag">CodeMirror 6</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">pnpm</span>
+                            <span class="tag">Hono</span>
+                            <span class="tag">Drizzle ORM</span>
+                            <span class="tag">Zod</span>
+                            <span class="tag">SimpleWebAuthn</span>
+                            <span class="tag">WebAuthn</span>
+                            <span class="tag">Arctic</span>
+                            <span class="tag">OAuth</span>
+                            <span class="tag">OIDC</span>
+                            <span class="tag">Vulkan</span>
+                            <span class="tag">MoltenVK</span>
+                            <span class="tag">SDL3</span>
+                            <span class="tag">Jolt Physics</span>
+                            <span class="tag">miniaudio</span>
+                            <span class="tag">fastgltf</span>
+                            <span class="tag">glTF 2.0</span>
+                            <span class="tag">KTX2</span>
+                            <span class="tag">Compiler Construction</span>
+                            <span class="tag">Language Design</span>
+                        </div>
+                    </div>
+
                     <!-- bloxopoly -->
                     <div class="card card-wide animate-in">
                         <div class="card-header">
@@ -188,7 +342,7 @@
                             </span>
                         </div>
 
-                       <p class="card-description">
+                        <p class="card-description">
                             A property board game on Roblox for 2 to 8 players. Buy up the board, build to tier 5, take over rivals'
                             streets, ride the bus, crack fortune cookies, and spin the lucky wheel. Win by owning three color sets, 
                             a whole row, or every server, or by being the last one standing.
@@ -240,7 +394,7 @@
                             </span>
                         </div>
 
-                       <p class="card-description">
+                        <p class="card-description">
                             A notch overlay for Windows. Music, calls, volume, and user widgets live in one pill 
                             at the top of the screen: present when something happens, gone when it's done. Written 
                             in C++20 on SDL3 and OpenGL, with the UI rendered by CEF (Chromium Embedded Framework) 
@@ -316,7 +470,7 @@
                     </div>
 
                     <!-- nuauth -->
-                    <div class="card card-wide animate-in">
+                    <div class="card animate-in">
                         <div class="card-header">
                             <h3><span class="card-title">nuauth</span><span class="card-slash">/</span></h3>
 
@@ -424,7 +578,7 @@
                     </div>
 
                     <!-- five nights at darius -->
-                    <div class="card card-wide animate-in">
+                    <div class="card animate-in">
                         <div class="card-header">
                             <h3><span class="card-title">five-nights-at-darius</span><span class="card-slash">/</span></h3>
 
