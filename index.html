@@ -70,7 +70,7 @@
                     <div>
                         <p class="animate-in">
                             I'm a Computer Science student at <strong>Bridgewater State University</strong> 
-                            (B.S., expected May 2028) and have been programming for about eight years. I 
+                            (B.S., expected May 2028) and have been programming for about nine years. I 
                             started by making Roblox games when I was a teenager and have since moved down the
                             stack. Most of my work today is <strong>C & C++ desktop and 
                             systems software</strong> & <strong>backend services</strong>.
@@ -165,163 +165,37 @@
                         </div>
 
                         <p class="card-description">
-                            A from-scratch successor to Blitz3D: a statically typed BASIC-style language, its compiler, and a full
-                            standard library, so writing a game feels as quick as it did in 2001, and the result ships as one 
-                            executable with no runtime to install.
+                            A from-scratch successor to Blitz3D: a statically typed BASIC-style language, its compiler, and
+                            a standard library, so writing a game feels as quick as it did in 2001 and ships as one executable
+                            with no runtime.
                         </p>
                         <p class="card-description">
-                            Utilized frontier models and agentic workflows, with up to a dozen parallel agent sessions each building
-                            one component of the language in its own worktree, with me directing the language design and architecture,
-                            ruling on every language and library decision, and reviewing all output. The compiler is built in C++23 with
-                            LLVM's C API and links with lld. It runs source through a lexer, parser, semantic analysis, a mid-level IR
-                            with its own compile-time interpreter, and LLVM codegen, for Windows, Linux, and macOS on x64 and ARM64.
+                            I direct the language design and architecture and review every change, with up to a dozen parallel
+                            agent sessions each building one component in its own worktree. The compiler is C++23 on LLVM's C API,
+                            linking with lld. Source goes through a lexer, arser, semantic analysis, a mid-level IR with its own
+                            compile-time interpreter, and LLVM codegen, targeting Windows, Linux, and macOS on x64 and ARM64.
                         </p>
                         <p class="card-description">
-                            The core language has Structs and Classes with automatic reference counting, nullable types that the 
-                            compiler narrows after a check, and single inheritance with Abstract, Final, and Override. It has arrays
-                            and fixed arrays, Enums and @Flags, Defer, and errors as values with Throw, Try, Catch, and Finally. Weak
-                            references break cycles, and debug builds report leaked objects and point out the cycles that hold them.
+                            The language has classes with automatic reference counting and weak references, nullable types the
+                            compiler narrows after a check, generics, closures, interfaces, errors as values, compile-time functions
+                            and reflection, and C interop through a libclang binding generator. Concurrency is built in, and Sendable
+                            and @MainThread checks catch data races at compile time.
                         </p>
-                        <p class="card-description">
-                            Programs can span many files. The language adds tuples, function values and closures, generics with
-                            constraints, user-defined Operators, and Interfaces with default Methods. Extend adds members to
-                            existing types, and For In works over any sequence, with slices and ranges.
-                        </p>
-                        <p class="card-description">
-                            Code can run at compile time. Const Functions run in the compiler's own interpreter, generics can take
-                            constant values, and reflection walks a type's Fields, Methods, and attributes as the program compiles.
-                        </p>
-                        <p class="card-description">
-                            Concurrency is built in. There are threads, Atomic and Mutex types, Shared Classes, Spawn and Tasks,
-                            Parallel For, and Channels. Async and Await run over stackless coroutines, with schedulers made for
-                            game loops. The compiler's Sendable and @MainThread checks catch data races before the program ever runs.
-                        </p>
-                        <p class="card-description">
-                            Larger projects get modules with Import, From, and Public, Package, and Private visibility, and project.toml
-                            packages with native libraries. C interop covers Extern blocks, pointers under Unsafe, @CLayout structs on
-                            the C ABI of every target, and Callbacks from C. fb-bindgen turns any C header into a FutureBlitz module
-                            through libclang.
-                        </p>
-                        <p class="card-description">
-                            The standard library is written mostly in FutureBlitz itself, and every C library it uses is linked statically:
-                        </p>
-                        <ul class="card-list">
-                            <li>
-                                <b>Basics:</b> collections, formatting and parsing (with a debug form for every value), Unicode text with
-                                a built-in Char, regex, Markdown, and templates.
-                            </li>
-                            <li>
-                                <b>Math:</b> vectors, matrices, noise, and splines; big integers, decimals, and units of measure.
-                            </li>
-                            <li>
-                                <b>Data:</b> built-in Load and Save that serialize any type; JSON, MessagePack, TOML, CSV, INI, XML,
-                                and YAML; Protocol Buffers read straight from .proto files.
-                            </li>
-                            <li>
-                                <b>System:</b> streams, files, and a virtual file system with embedded assets; time zones, processes,
-                                cryptography, compression and archives, UUIDs, and SQLite.
-                            </li>
-                            <li>
-                                <b>Programs:</b> image codecs and drawing, terminal UIs, and pathfinding.
-                            </li>
-                            <li>
-                                <b>Networking:</b> TCP, UDP, IPC, and LAN discovery; TLS, an HTTP/2 client, an HTTP server with 
-                                WebSockets, and reliable UDP for multiplayer games.
-                            </li>
-                        </ul>
 
                         <div class="tags">
                             <span class="tag">C++23</span>
                             <span class="tag">CMake</span>
-                            <span class="tag">Ninja</span>
                             <span class="tag">LLVM</span>
                             <span class="tag">lld</span>
                             <span class="tag">libclang</span>
-                            <span class="tag">GCC</span>
-                            <span class="tag">MinGW-w64</span>
-                            <span class="tag">Clang</span>
-                            <span class="tag">clang-format</span>
-                            <span class="tag">clang-tidy</span>
                             <span class="tag">Catch2</span>
-                            <span class="tag">toml++</span>
-                            <span class="tag">fast_float</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">GitHub</span>
-                            <span class="tag">GitHub Actions</span>
-                            <span class="tag">WSL</span>
-                            <span class="tag">libuv</span>
-                            <span class="tag">mbedTLS</span>
-                            <span class="tag">libcurl</span>
-                            <span class="tag">nghttp2</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">zlib-ng</span>
-                            <span class="tag">zstd</span>
-                            <span class="tag">LZ4</span>
-                            <span class="tag">liblzma</span>
-                            <span class="tag">minizip-ng</span>
-                            <span class="tag">libtommath</span>
-                            <span class="tag">mpdecimal</span>
-                            <span class="tag">IANA tzdata</span>
-                            <span class="tag">xxHash</span>
-                            <span class="tag">BLAKE3</span>
-                            <span class="tag">Argon2</span>
-                            <span class="tag">crypt_blowfish</span>
-                            <span class="tag">Monocypher</span>
-                            <span class="tag">utf8proc</span>
-                            <span class="tag">PCRE2</span>
-                            <span class="tag">md4c</span>
-                            <span class="tag">stb_image</span>
-                            <span class="tag">libwebp</span>
-                            <span class="tag">nanosvg</span>
-                            <span class="tag">Protocol Buffers</span>
-                            <span class="tag">JSON</span>
-                            <span class="tag">MessagePack</span>
-                            <span class="tag">TOML</span>
-                            <span class="tag">YAML</span>
-                            <span class="tag">XML</span>
-                            <span class="tag">WebSockets</span>
-                            <span class="tag">ACME</span>
-                            <span class="tag">HTTP/2</span>
-                            <span class="tag">TLS</span>
-                            <span class="tag">mDNS</span>
                             <span class="tag">Language Server Protocol</span>
-                            <span class="tag">VS Code Extensions</span>
-                            <span class="tag">Cloudflare Workers</span>
-                            <span class="tag">Cloudflare R2</span>
-                            <span class="tag">Cloudflare D1</span>
-                            <span class="tag">Cloudflare Durable Objects</span>
-                            <span class="tag">Cloudflare Queues</span>
-                            <span class="tag">Cloudflare Containers</span>
-                            <span class="tag">Cloudflare Workers Analytics Engine</span>
-                            <span class="tag">Cloudflare Email Service</span>
-                            <span class="tag">Cloudflare Turnstile</span>
-                            <span class="tag">Astro</span>
-                            <span class="tag">MDX</span>
-                            <span class="tag">Shiki</span>
-                            <span class="tag">Pagefind</span>
-                            <span class="tag">Svelte 5</span>
-                            <span class="tag">CodeMirror 6</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">pnpm</span>
-                            <span class="tag">Hono</span>
-                            <span class="tag">Drizzle ORM</span>
-                            <span class="tag">Zod</span>
-                            <span class="tag">SimpleWebAuthn</span>
-                            <span class="tag">WebAuthn</span>
-                            <span class="tag">Arctic</span>
-                            <span class="tag">OAuth</span>
-                            <span class="tag">OIDC</span>
                             <span class="tag">Vulkan</span>
-                            <span class="tag">MoltenVK</span>
                             <span class="tag">SDL3</span>
-                            <span class="tag">Jolt Physics</span>
-                            <span class="tag">miniaudio</span>
-                            <span class="tag">fastgltf</span>
-                            <span class="tag">glTF 2.0</span>
-                            <span class="tag">KTX2</span>
-                            <span class="tag">Compiler Construction</span>
-                            <span class="tag">Language Design</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Cloudflare</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Python</span>
                         </div>
                     </div>
 
@@ -366,11 +240,7 @@
                             <span class="tag">Roblox Studio</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">React</span>
-                            <span class="tag">Hono</span>
-                            <span class="tag">Cloudflare Workers</span>
-                            <span class="tag">Cloudflare D1</span>
-                            <span class="tag">Cloudflare R2</span>
-                            <span class="tag">Durable Objects</span>
+                            <span class="tag">Cloudflare</span>
                             <span class="tag">Roblox Open Cloud</span>
                             <span class="tag">OAuth</span>
                             <span class="tag">TailwindCSS</span>
@@ -406,7 +276,7 @@
                             features into place. Every widget, built-ins included, is a sandboxed Luau mod 
                             loaded via the filesystem or through the Steam Workshop. Mods are written against 
                             a strictly typed API with scoped permissions. Perch Studio, a standalone mod IDE 
-                            shipped as its own Steam tool, uses Monaco with luau-lsp over our API, displays 
+                            shipped as its own Steam tool, uses Monaco with luau-lsp over Perch's API, displays 
                             previews through Perch's real rendering system, and publishes mods straight to 
                             the Steam Workshop.
                         </p>
@@ -454,13 +324,16 @@
                             map zones, room interiors, vehicle spawn info, and more.
                         </p>
 
+                        <p class="card-description">
+                            Engineered to theoretically serve unlimited users at a flat 
+                            $15/month on Cloudflare.
+                        </p>
+
                         <div class="tags">
                             <span class="tag">C++20</span>
                             <span class="tag">TypeScript</span>
                             <span class="tag">React</span>
-                            <span class="tag">Cloudflare Pages</span>
-                            <span class="tag">Cloudflare R2</span>
-                            <span class="tag">Cloudflare Workers</span>
+                            <span class="tag">Cloudflare</span>
                         </div>
                     </div>
 
@@ -476,13 +349,10 @@
                         </div>
 
                         <p class="card-description">
-                            A DRM and software licensing platform for solo developers through enterprise 
-                            clients: license validation, hardware-bound bans, and authenticated secret 
-                            streaming behind a multi-region ASP.NET deployment.
-                        </p>
-
-                        <p class="card-description">
-                            The project was retired in 2025.
+                            A DRM and software licensing platform: license validation, hardware-bound bans, 
+                            and authenticated secret streaming, built on ASP.NET Core with PostgreSQL and 
+                            Redis. The infrastructure was built and tested, but the platform never launched. 
+                            Retired in 2025.
                         </p>
 
                         <div class="tags">
@@ -619,18 +489,6 @@
                             The site you're currently on, built with plain HTML, CSS, and JavaScript.
                         </p>
 
-                        <p class="card-description">
-                            Over the past year I've moved most of my project development to AI-driven workflows, because
-                            that's where the industry is heading and I want to be good at it before I'm doing it on the job.
-                            I treat agents like a team I'm leading: I own the design and architecture, split the work into
-                            well-scoped pieces, run them in parallel, and review and test everything before it lands. The
-                            models write a lot of the code, but the decisions and the responsibility for what ships are mine.
-                        </p>
-
-                        <p class="card-description">
-                            This site is the opposite. Every line here was written by hand, with no AI involved.
-                        </p>
-
                         <div class="tags">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
@@ -690,8 +548,6 @@
                         <span class="tag">Multithreading</span>
                         <span class="tag">Asynchronous Programming</span>
                         <span class="tag">Atomics</span>
-                        <span class="tag">Embedded Systems</span>
-                        <span class="tag">Microcontrollers</span>
                     </div>
                 </div>
 
@@ -740,14 +596,13 @@
                         <span class="tag">MySQL</span>
                         <span class="tag">SQLite</span>
                         <span class="tag">Database Design</span>
-                        <span class="tag">Indexing & Query Optimization</span>
                         <span class="tag">REST API Design</span>
                         <span class="tag">Web Sockets</span>
                         <span class="tag">Long Polling</span>
                         <span class="tag">OAuth</span>
                         <span class="tag">Applied Cryptography</span>
                         <span class="tag">Unit Testing</span>
-                        <span class="tag">Structured Logging</span>
+                        <span class="tag">Logging</span>
                         <span class="tag">Seq</span>
                         <span class="tag">Telemetry Pipelines</span>
                     </div>
@@ -803,10 +658,6 @@
                         <span class="tag">CSS</span>
                         <span class="tag">Electron</span>
                         <span class="tag">Monaco Editor</span>
-                        <span class="tag">WPF</span>
-                        <span class="tag">WinUI</span>
-                        <span class="tag">UWP</span>
-                        <span class="tag">.NET MAUI</span>
                         <span class="tag">Unity</span>
                         <span class="tag">Roblox Studio</span>
                         <span class="tag">Blitz3D</span>
@@ -832,7 +683,6 @@
                         <span class="tag">Figma</span>
                         <span class="tag">ffmpeg</span>
                         <span class="tag">Wireshark</span>
-                        <span class="tag">x64dbg</span>
                         <span class="tag">Photoshop</span>
                         <span class="tag">Affinity Photo 2</span>
                     </div>
